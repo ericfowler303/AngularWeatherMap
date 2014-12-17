@@ -13,6 +13,11 @@ app.controller("LayersSimpleController", [ '$scope', function($scope) {
                     name: 'OpenStreetMap',
                     url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                     type: 'xyz'
+                },
+                precipitation: {
+                    name: 'OpenWeatherMap - Precipitation',
+                    url: 'http://{s}.tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png',
+                    type: 'xyz'
                 }
             }
         },
