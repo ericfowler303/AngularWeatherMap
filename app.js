@@ -32,3 +32,21 @@ app.controller("LayersSimpleController", [ '$scope', function($scope) {
         }
     });
 } ]);
+
+app.controller('FormController', ['$scope', '$http', function($scope,$http){
+    this.locationInput = "";
+    this.locationOutput =[];
+
+    $scope.updateLocation = function () {
+        // preform a http.get to grab the new location
+        var replacedInput = this.locationInput.replace(/ /g, '+');
+        var url ="http://nominatim.openstreetmap.org/search?q="+replacedInput+"&format=json&polygon=0&addressdetails=0"
+        
+        $http.get(url).success( function(data) {
+            alert(url);
+            this.locationOutput = data;
+            alert(this.locationOutput);
+        });
+        
+    };
+}]);
