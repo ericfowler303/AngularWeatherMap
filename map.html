@@ -1,0 +1,15 @@
+<html ng-app="weather">
+<head>
+	<title>Percipitation using OpenWeatherMap, Leaflet and AngularJS</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+	<script src="angular-leaflet-directive.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div ng-controller="LayersSimpleController">
+	    <leaflet center="denver" layers="layers" defaults="defaults"></leaflet>
+	</div>
+</body>
+</html>
