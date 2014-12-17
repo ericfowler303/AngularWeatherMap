@@ -13,11 +13,17 @@ app.controller("LayersSimpleController", [ '$scope', function($scope) {
                     name: 'OpenStreetMap',
                     url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                     type: 'xyz'
-                },
+                }                
+            },
+            overlays: {
                 precipitation: {
                     name: 'OpenWeatherMap - Precipitation',
+                    type: 'xyz',
                     url: 'http://{s}.tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png',
-                    type: 'xyz'
+                    visible: true,
+                    layerOptions: {
+                        opacity:0.5
+                    }
                 }
             }
         },
